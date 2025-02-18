@@ -1,0 +1,57 @@
+.btn-rounded{ border-radius: 20px ; }
+.btn-bgnone{ background: none !important; border: 1px solid lightgray; color: gray }
+.btn-bgnone:hover{ background: #fec107 !important; border: none !important; color:white; }
+.btn-diario{ background: #31a3fc; color: white; padding: 0px 35px 0px 35px;; }
+.btn-semanal{ background: #2473ea; color: white; padding: 0px 25px 0px 25px; }
+.btn-mensual{ background: #0e47a1; color: white; padding: 0px 25px 0px 25px; }
+.btn-modalguardar{background: #33CFCA !important; color: white !important;}
+.btn-cancelar{ background: #F5F5F5; }
+.btn-aceptar{ background: var(--gr-r-red); }
+.btn-edit{
+    background: -webkit-linear-gradient(90deg, #0D4DFF, #03D6BC 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover{
+        background: linear-gradient(90deg, #03D6BC 0%, #0D4DFF 100%);
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+    }
+}
+.btn-delete{
+    background: -webkit-linear-gradient(90deg, #FF2525, #FF9D32 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover{
+        background: linear-gradient(90deg, #FF9D32, 40%, #FF2525 100%);
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+    }
+}
+.btn-general{
+    background: var(--color-general)!important;
+    color: white!important;
+    &:hover{
+      box-shadow: 0 1px 4px #00000063;
+    }
+}
+.btn-orange{
+    background: #E74A3B!important;
+    color: white!important;
+    &:hover{
+      box-shadow: 0 1px 4px #00000063;
+    }
+}
+.btn-green{
+    background: #0E8F9B!important;
+    color: white!important;
+    &:hover{
+      box-shadow: 0 1px 4px #00000063;
+    }
+}
+.btn-yellow{
+    background: #FD9644!important;
+    color: white!important;
+    &:hover{
+      box-shadow: 0 1px 4px #00000063;
+    }
+}

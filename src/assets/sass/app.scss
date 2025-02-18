@@ -1,0 +1,27 @@
+//abstracts
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+// base
+@import 'base/typography.scss';
+
+// theme
+/* @import 'theme/theme.scss'; */
+@import 'theme/colores.scss';
+
+//personalizados
+@import 'personalizados/helpes.scss';
+
+//components
+@import 'components/check_radio.scss';
+@import 'components/checkbox.scss';
+@import 'components/buttons.scss';
+@import 'components/switch.scss';
+@import 'components/popover.scss';
+@import 'components/input.scss';
+@import 'components/tooltip.scss';
+@import 'components/vueperslides.css';
+@import 'components/vueper.scss';
+@import 'components/drawer.scss';
+
+

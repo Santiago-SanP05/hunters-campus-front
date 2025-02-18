@@ -1,0 +1,28 @@
+
+/* Backgrounds */
+.bg-general{ background: var(--color-general) !important; }
+.bg-black{ background-color: #000000 !important; }
+.bg-70{ background-color: var(--color-70) !important;}
+.bg-f5{ background-color: var(--color-f5) !important; }
+.bg-5d{ background-color: var(--color-5d) !important; }
+.bg-fondo{ background-color: var(--color-grey) !important; }
+.bg-whitesmoke { background-color: #f8f8f8 !important; }
+.bg-yellow{ background-color: var(--color-yellow); }
+.bg-green{ background-color: var(--color-green); }
+.bg-red{ background-color: var(--color-red) !important; }
+
+/* Textos */
+.text-general{ color: var(--color-general); }
+.text-red{ color: var(--color-red); }
+.text-black{ color: var(--color-text); }
+.text-alternative{ color: var(--color-70); }
+.text-5d{ color: var(--color-5d); }
+.text-db{ color: var(--color-db); }
+.text-orange{ color: #FF602B; }
+.text-green{ color: var(--color-green); }
+
+
+/* Border */
+.border-orange{ border: 1px solid #FF602B }
+.border-black{ border: 1px solid var(--color-text) }
+.border-red{ border: 1px solid var(--color-red); }

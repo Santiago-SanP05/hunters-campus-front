@@ -1,0 +1,121 @@
+.el-radio__label{
+color: var(--text-dark)!important;
+}
+// .el-checkbox__input.is-checked .el-checkbox__inner{
+//     background-color: var(--color-general)!important;;
+//     border-color: var(--color-general)!important;;
+// }
+// .el-checkbox__input.is-checked+.el-checkbox__label{
+//     color: var(--color-general)!important;;
+// }
+// .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+//     background-color: var(--color-general)!important;;
+//     border-color: var(--color-general)!important;;
+// }
+//checkbox element dark
+.el-checkbox{
+    .el-checkbox__label{
+        color: var(--text-dark)
+    }
+}
+.check-dark{
+    .el-checkbox__inner {
+        background-color: var(--tema);
+        border-color: var(--color-shadow);
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+        background-color: #5D5D5D !important;
+        border-color: #5D5D5D !important;
+    }
+    .el-checkbox__input.is-checked+.el-checkbox__label{
+        color: #5D5D5D !important;
+    }
+}
+.check-general{
+    .el-checkbox__inner {
+        background-color: var(--tema);
+        border-color: var(--color-shadow);
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+        background-color: var(--color-general)!important;
+        border-color: var(--color-general)!important;
+        // &:after{
+        //     border-color: var(--color-general) !important;
+        // }
+    }
+    .el-checkbox__input.is-checked+.el-checkbox__label{
+        color: var(--color-general)!important;
+    }
+}
+// radio element dark
+.radio-dark{
+    .el-radio__input.is-checked .el-radio__inner {
+        background-color: #5D5D5D;
+        border-color: #5D5D5D;
+    }
+    .el-radio__input.is-checked+.el-radio__label{
+        color: #5D5D5D;
+    }
+}
+.radio-general{
+    .el-radio__input.is-checked .el-radio__inner {
+        background-color: var(--color-general)!important;
+        border-color: var(--color-general)!important;
+    }
+    .el-radio__input.is-checked+.el-radio__label{
+        color: var(--color-general)!important;
+    }
+}
+.check-border{
+    .el-checkbox__label{
+        border: 1px solid #DBDBDB;
+        padding: 5px;
+        margin: 8px;
+        min-width: 160px;
+    }
+}
+
+.radio-input {
+    .el-radio__input {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .el-radio__label{
+        padding: 0;
+    }
+}
+// proyectos-productos-index
+.radio-opciones-proyectos-productos{
+    .el-radio-button__inner{
+        padding: 6px !important;
+    }
+}
+// label hidden (se encuentra en proyectos parametros porcentajes)
+.lbl-hidden{
+    .el-radio__label{
+        display: none;
+    }
+}
+// checkbox en control de pisos (equipos)
+.check-dias{
+    .el-checkbox-button__inner{
+        // padding: 5px 7px !important;
+        width: 21.91px;
+        height: 21px;
+        font-size: 9px !important;
+        padding: 0px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent !important;
+    }
+    label.el-checkbox-button.is-checked{
+        .el-checkbox-button__inner{
+            color: transparent !important;
+            background-color: #5d5d5d !important;
+            border-color: #5d5d5d !important;
+            box-shadow: -1px 0 0 0 #fff;
+
+        }
+    }
+}

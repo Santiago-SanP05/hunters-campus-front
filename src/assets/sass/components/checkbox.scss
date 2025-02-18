@@ -1,0 +1,86 @@
+
+//  Tamaños
+
+.check-md{
+    .el-checkbox__inner{
+        width: 18px !important;
+        height: 18px !important;
+        &::after{
+            left: 6px !important;
+            height: 7px !important;
+            top: 3px !important;
+        }
+    }
+}
+
+
+// Colores
+
+.check-dark{
+    .el-checkbox__inner {
+        background-color: var(--tema);
+        border-color: var(--color-shadow);
+        &:hover{
+            border: 1px solid #000000;
+        }
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+        background-color: #000000 !important;
+        border-color: #000000 !important;
+    }
+    .el-checkbox__input.is-checked+.el-checkbox__label{
+        color: #000000 !important;
+    }
+    .el-checkbox__input.is-indeterminate{
+        .el-checkbox__inner{
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+    }
+}
+
+.check-general{
+    .el-checkbox__inner {
+        background-color: var(--tema);
+        border-color: var(--color-shadow);
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+        background-color: var(--color-general)!important;
+        border-color: var(--color-general)!important;
+    }
+    .el-checkbox__input.is-checked+.el-checkbox__label{
+        color: var(--color-general)!important;
+    }
+}
+
+.check-red{
+    .el-checkbox__inner {
+        background: var(--tema);
+        border-color: var(--color-shadow);
+        width: 18px !important;
+        height: 18px !important;
+        &:hover{
+            border-color: #FF3737 !important;
+        }
+        &::after{
+            height: 11px !important;
+            width: 4px !important;
+            top: 0px !important;
+            left: 6px !important;
+        }
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner{
+        background: #FF3737!important;
+        border-color: #FF3737 !important;
+    }
+    .el-checkbox__input.is-checked+.el-checkbox__label{
+        color: var(--text-general)!important;
+    }
+    .el-checkbox__input.is-indeterminate{
+        .el-checkbox__inner{
+            background-color: var(--color-general) !important;
+            border-color: var(--color-general) !important;
+        }
+    }
+    
+}

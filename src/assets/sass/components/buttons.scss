@@ -1,0 +1,57 @@
+.btn-skewX15{
+	height: 32px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none !important;
+    transform: skewX(-15deg);
+    font-family: 'Kunnari Medium italic';
+}
+.btn-general{
+    background-color: #FF1720;
+    height: 32px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none !important;
+    transform: skewX(-15deg);
+    color: white !important;
+    font-family: 'Kunnari Medium italic';
+}
+
+.btn-grey{
+    background-color: #637381;
+    height: 32px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none !important;
+    transform: skewX(-15deg);
+    color: white !important;
+    font-family: 'Kunnari Medium italic';
+}
+
+.btn-black{
+    background-color: #000000;
+    height: 32px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none !important;
+    transform: skewX(-15deg);
+    color: white !important;
+    font-family: 'Kunnari Medium italic';
+}
+
+.btn-grey-light{
+	@extend .btn-skewX15;
+	background-color: #F6F9FB;
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.342" height="73.342" viewBox="0 0 73.342 73.342">
+  <defs>
+    <filter id="Rectángulo_16424" x="0" y="0" width="73.342" height="73.342" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="medalla_eventos" data-name="medalla eventos" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Rectángulo_16424)">
+      <rect id="Rectángulo_16424-2" data-name="Rectángulo 16424" width="39.133" height="39.133" transform="translate(36.67 6) rotate(45)" fill="#458700"/>
+    </g>
+    <g id="Rectángulo_16425" data-name="Rectángulo 16425" transform="translate(27.671 4) rotate(45)" fill="none" stroke="#9aff2e" stroke-width="1">
+      <rect width="33.734" height="33.734" stroke="none"/>
+      <rect x="0.5" y="0.5" width="32.734" height="32.734" fill="none"/>
+    </g>
+    <path id="Trazado_20840" data-name="Trazado 20840" d="M19.1,12.2V2H7V12.2a1.2,1.2,0,0,0,.593,1.041l5.058,3.037-1.2,2.831-4.126.351,3.134,2.71L9.5,26.2l3.545-2.142L16.6,26.2l-.944-4.029,3.134-2.71L14.66,19.11l-1.2-2.831,5.058-3.037A1.2,1.2,0,0,0,19.1,12.2Zm-7.26.774L9.42,11.523V4.42h2.42Zm4.84-1.452-2.42,1.452V4.42h2.42Z" transform="translate(14.591 14.541)" fill="#9aff2e"/>
+  </g>
+</svg>

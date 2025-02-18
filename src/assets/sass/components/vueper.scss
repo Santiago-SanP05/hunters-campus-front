@@ -1,0 +1,35 @@
+.h-vueper{
+    height: 380px;
+    .vueperslides__inner{
+        height: 100%!important;
+        .vueperslides__parallax-wrapper{
+            padding: 0!important;
+            height: 395px;
+        }
+        .vueperslides__arrow--next{
+            right: -1.9em!important;
+        }
+        .vueperslides__arrow--prev{
+            left: -1.9em!important;
+        }
+    }
+}
+.h-vueper2{
+    height: 70px;
+    .vueperslides__inner{
+        height: 100%!important;
+        .vueperslides__parallax-wrapper{
+            padding: 0!important;
+            height: 90px;
+            .vueperslide{
+                margin-right: 2.8%!important;
+            }
+        }
+        .vueperslides__arrow--next{
+            right: -2.9em!important;
+        }
+        .vueperslides__arrow--prev{
+            left: -2.9em!important;
+        }
+    }
+}

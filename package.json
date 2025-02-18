@@ -1,0 +1,132 @@
+{
+  "name": "hunters",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bootstrap": "^4.5.3",
+    "core-js": "^3.7.0",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.14.1",
+    "jquery": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "popper.js": "^1.16.1",
+    "register-service-worker": "^1.7.1",
+    "vee-validate": "^3.4.5",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.22.2",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.4.9",
+    "vue2-filters": "^0.14.0",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.0",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-pwa": "^4.5.9",
+    "@vue/cli-plugin-router": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.48.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "globals": {
+      "_": true,
+      "$": true,
+      "moment": true
+    },
+    "plugins": [
+      "vue"
+    ],
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:vue/recommended",
+      "plugin:vue/base",
+      "plugin:vue/strongly-recommended"
+    ],
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "sourceType": "module",
+      "ecmaVersion": 2017
+    },
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "space-before-blocks": [
+        "error",
+        "always"
+      ],
+      "vue/max-attributes-per-line": "off",
+      "vue/html-indent": [
+        "error",
+        4,
+        {
+          "attribute": 0,
+          "baseIndent": 1,
+          "closeBracket": 0,
+          "alignAttributesVertically": true,
+          "ignores": []
+        }
+      ],
+      "vue/html-self-closing": [
+        "error",
+        {
+          "html": {
+            "void": "always",
+            "normal": "always",
+            "component": "always"
+          },
+          "svg": "always",
+          "math": "always"
+        }
+      ],
+      "vue/singleline-html-element-content-newline": [
+        "error",
+        {
+          "ignores": [
+            "pre",
+            "textarea",
+            "p",
+            "label",
+            "a",
+            "option",
+            "span",
+            "h5"
+          ]
+        }
+      ]
+    }
+  }
+}

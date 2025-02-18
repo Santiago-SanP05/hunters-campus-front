@@ -1,0 +1,112 @@
+$back: #ffffff;
+$color: #3C09AF;
+$gris: #DBDBDB;
+$orange: #FF9D32;
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  transition: all 0.15s ease-out 0s;
+  background: $color;
+  border: 2px solid #fff;
+  color: $color;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  &.opt-gris{
+      border: 2px solid $gris!important;
+      background: transparent;
+      color: $orange;
+      &:checked{
+        background: #fff!important
+      }
+      &:checked::after{
+        background: $gris!important;
+      }
+  }
+  &.opt-general{
+      border: 2px solid $gris!important;
+      background: transparent;
+      color: var(--color-general);
+      &:checked{
+        background: #fff!important
+      }
+      &:checked::after{
+        background: $gris!important;
+      }
+  }
+  &.opt-morado{
+    border: 2px solid $gris!important;
+    background: transparent;
+    color: #ffffff;
+    &:checked{
+      background: var(--color-general)!important
+    }
+    &:checked::after{
+      background: $gris!important;
+    }
+}
+}
+
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: $back;
+}
+.option-input:checked::before {
+  height: 23px;
+  width: 23px;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 24px;
+}
+.option-input:checked::after {
+  // -webkit-animation: click-wave 0.65s;
+  // -moz-animation: click-wave 0.65s;
+  // animation: click-wave 0.65s;
+  background: $back;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}

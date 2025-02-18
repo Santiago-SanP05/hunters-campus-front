@@ -1,0 +1,19 @@
+.el-menu-vertical-demo{
+    .el-menu-item{
+        padding: 0px!important;
+        div.el-tooltip{
+            padding: 0px!important;
+            display: flex!important;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+#el-drawer__title{
+    background: var(--gr-r-red);
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    background-size: cover;
+    padding: 9px;
+}

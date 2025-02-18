@@ -1,0 +1,21 @@
+.el-switch.mini{
+    .el-switch__core{
+        width: 25px!important;
+        height: 11px!important;
+        &:after{
+            height: 7px;
+            width: 10px;
+        }
+    }
+}
+.el-switch.is-checked.mini .el-switch__core::after {
+    left: 100%;
+    margin-left: -12px!important;
+}
+.switch-red.is-checked{
+    .el-switch__core{
+        border: none;
+        // border-image: linear-gradient(90deg, #FF9D32, #FF2525)!important;
+        background: var(--gr-red)!important;
+    }
+}

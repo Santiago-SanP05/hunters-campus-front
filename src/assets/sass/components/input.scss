@@ -1,0 +1,39 @@
+.el-input{
+    .el-input__inner{
+        &:focus{
+            border-color: var(--color-general) !important;
+        }
+    }
+}
+
+
+.el-input{
+    input{
+        border-radius: 0px;
+    }
+}
+.el-input.br-20{
+    input{
+        border-radius: 20px;
+    }
+}
+.el-textarea{
+    textarea{
+        border-radius: 0px;
+    }
+}
+.bg-disabled{
+    .el-input.is-disabled .el-input__inner{
+        background-color: #F5F5F5!important;
+        color: #5D5D5D!important;
+        cursor: default;
+    }
+}
+.bg-inactive{
+    .el-input.is-disabled .el-input__inner{
+        background-color: #F5F5F5!important;
+        color: #5D5D5D!important;
+        cursor: default;
+        opacity: 0.5;
+    }
+}

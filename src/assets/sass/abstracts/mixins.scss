@@ -1,0 +1,47 @@
+// Set un width y height fijo
+@mixin wh-fijo($w, $h) {
+    min-width: $w;
+    max-width: $w;
+    min-height: $h;
+    max-height: $h;
+}
+
+@for $i from 1 through 200 {
+    .wh-#{$i} {
+        @include wh-fijo($i+px, $i+px);
+    }
+}
+
+// width | height | min width | min height | px
+@for $i from 1 through 350 {
+    .w-#{$i}px {
+        width: $i+px !important;
+    }
+    .h-#{$i}px {
+        height: $i+px !important;
+    }
+    .wm-#{$i}px {
+        min-width: $i+px !important;
+    }
+    .hm-#{$i}px {
+        min-height: $i+px !important;
+    }
+    .wM-#{$i}px {
+        max-width: $i+px !important;
+    }
+    .hM-#{$i}px {
+        max-height: $i+px !important;
+    }
+    .wf-#{$i}px {
+        min-width: $i+px !important;
+        max-width: $i+px !important;
+    }
+    .hf-#{$i}px {
+        min-height: $i+px !important;
+        max-height: $i+px !important;
+    }
+
+    .hc-#{$i}px {
+        height: calc(100vh - #{$i+px}) !important;
+    }
+}

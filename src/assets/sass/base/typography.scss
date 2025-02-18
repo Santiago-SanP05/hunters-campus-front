@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Kunnari";
+    font-weight: 600;
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kunnari-Medium";
+    font-weight: 500;
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Medium.otf") format("truetype");
+}
+@font-face {
+    font-family: "Kuunari-Regular";
+    font-weight: 400;
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kunnari black";
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Black.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kunnari black italic";
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Black Italic.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kunnari bold italic";
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Bold Italic.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kunnari Medium italic";
+    src: url("~@/assets/fonts/Mika Melvas - Kuunari Medium Italic.otf") format("truetype");
+}
+
+.font-black{
+    font-family: 'Kunnari black' !important;
+    font-style: normal !important;
+}
+
+.font-black-italic{
+    font-family: 'Kunnari black italic' !important;
+    font-style: italic !important;
+}
+
+.font-bold-italic{
+    font-family: 'Kunnari bold italic' !important;
+    font-style: italic !important;
+}
+
+.font-medium-italic{
+    font-family: 'Kunnari Medium italic' !important;
+    font-style: italic !important;
+}
+
+.fk-medium{
+	font-family: "Kunnari-Medium";
+}
+
+.fk-regular{
+	font-family: "Kuunari-Regular" !important;
+}
+
+// body{
+//     font-family: 'DM Sans';
+//     font-style: normal;
+//     font-weight: 400;
+// }
+
+.ucfirst::first-letter{
+    text-transform: uppercase !important;
+}
+
+.nl2br{
+    white-space: pre-wrap !important;
+}
+
+.text{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: pre-line;
+    &-2{ -webkit-line-clamp: 2; }
+    &-3{ -webkit-line-clamp: 3; }
+    &-4{ -webkit-line-clamp: 4; }
+    &-5{ -webkit-line-clamp: 5; }
+}

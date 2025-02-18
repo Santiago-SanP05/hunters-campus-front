@@ -1,0 +1,6 @@
+.border-general-edit{
+    border: 1px solid var(--color-general) !important;
+    .popper__arrow{
+        border-bottom-color: 1px solid var(--color-general) !important;
+    }
+}

@@ -1,0 +1,23 @@
+.bg-cabecera{
+    table{
+        thead{
+            th{
+                padding: 7px 3px !important;
+                background: #F3F3F3 !important;
+                color: #6C6B6B;
+            }
+        }
+    }
+}
+
+.el-table .cell{
+    word-break: break-word!important;
+}
+
+.tabla-bg-general {
+    th {
+        color: #6C6B6B;
+        background: var(--color-general) !important;
+        /* border-bottom: 1px solid red; */
+    }
+}

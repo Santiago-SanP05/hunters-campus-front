@@ -1,0 +1,17 @@
+.el-drawer__wrapper{
+	&.modal-login-admin{
+		// height: 50%;
+		height: 445px;
+		transform: translate(0px, 50%);
+		.el-drawer__header{
+			font-size: 30px;
+			background-color: var(--color-red);
+			padding: 10px !important;
+			color: #fff !important;
+			text-align: center !important;
+			font-family: "Kunnari";
+			font-weight: 300;
+			margin-bottom: 5px;
+		}
+	}
+}
