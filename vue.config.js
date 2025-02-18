@@ -1,11 +1,31 @@
 const webpack = require('webpack')
 const path = require('path')
 
-// console.log(process.env.NODE_ENV);
-
 module.exports = {
     chainWebpack: config => {
         config.module.rule('svg').use('file-loader').loader('vue-svg-loader')
+        
+        // Optimiza los chunks para el middleware
+        config.optimization.splitChunks({
+            chunks: 'all',
+            maxInitialRequests: Infinity,
+            minSize: 0,
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name(module) {
+                        const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
+                        return `npm.${packageName.replace('@', '')}`
+                    }
+                },
+                middleware: {
+                    test: /[\\/]middleware[\\/]/,
+                    name: 'middleware',
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
+        })
     },
     configureWebpack: {
         plugins: [
@@ -14,7 +34,6 @@ module.exports = {
                 jQuery: 'jquery',
                 _: 'lodash',
                 echarts: 'echarts',
-                // moment: 'moment'
             })
         ],
         resolve: {
@@ -25,6 +44,10 @@ module.exports = {
             }
         }
     },
+    productionSourceMap: false,
+    publicPath: '/',
+    outputDir: 'dist',
+    assetsDir: 'static',
     pwa: {
         name: 'Hunters',
         themeColor: '#4DBA87',
@@ -32,7 +55,12 @@ module.exports = {
         appleMobileWebAppCapable: 'yes',
         appleMobileWebAppStatusBarStyle: 'black',
         workboxOptions: {
-            skipWaiting: true
+            skipWaiting: true,
+            cleanupOutdatedCaches: true,
+            exclude: [
+                /\.map$/,
+                /manifest\.json$/
+            ]
         },
         manifestOptions: {
             name: 'Hunters',
