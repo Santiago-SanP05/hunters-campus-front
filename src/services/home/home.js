@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Home = {
     getTribus(){
-        return axios(`home/get-tribus`)
+        return axios(`/home/get-tribus`)
     },
 }
 
