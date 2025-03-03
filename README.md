@@ -1,93 +1,164 @@
-# hunters-vue
+# Documentación General del Frontend - Hunters Campus
 
+## Descripción General
+El frontend de **Hunters Campus** está desarrollado en **Vue.js** y proporciona la interfaz de usuario para gestionar desafíos, torneos y tribus. Utiliza Vue Router para la navegación, Vuex para el manejo del estado global e i18n para la internacionalización.
 
+---
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Estructura del Proyecto
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/desarrollador3gbp/hunters-vue.git
-git branch -M main
-git push -uf origin main
+hunters-campus-front/
+  |-- .env               # Variables de entorno
+  |-- babel.config.js    # Configuración de Babel
+  |-- package.json       # Dependencias y scripts
+  |-- vue.config.js      # Configuración de Vue CLI
+  |-- public/
+  |   |-- index.html     # Archivo HTML base
+  |-- src/
+      |-- main.js        # Archivo principal de Vue
+      |-- App.vue        # Componente raíz
+      |-- assets/        # Recursos estáticos (imagenes, fuentes, estilos)
+      |-- components/    # Componentes reutilizables
+      |-- layouts/       # Diseños de páginas
+      |-- middleware/    # Middleware para autenticación y localización
+      |-- mixins/        # Funcionalidades reutilizables
+      |-- pages/         # Páginas principales del sistema
+      |-- plugins/       # Configuración de plugins externos
+      |-- router/        # Configuración de rutas
+      |-- services/      # Comunicación con la API
+      |-- store/         # Manejo del estado global con Vuex
 ```
 
-## Integrate with your tools
+---
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://gitlab.com/desarrollador3gbp/hunters-vue/-/settings/integrations)
+## Configuración y Dependencias
+El proyecto usa las siguientes dependencias clave:
 
-## Collaborate with your team
+- **Vue.js 2.6.11** → Framework principal
+- **Vue Router** → Manejo de rutas
+- **Vuex** → Gestión de estado global
+- **Axios** → Consumo de API REST
+- **Vee-validate** → Validación de formularios
+- **Vue i18n** → Soporte de idiomas
+- **Element UI** → Componentes visuales
+- **Moment.js** → Manejo de fechas
+- **Lodash** → Utilidades para manipulación de datos
 
-- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+---
 
-## Test and Deploy
+## Configuración de Rutas
+Las rutas están definidas en `src/router/index.js` y se organizan por módulos:
 
-Use the built-in continuous integration in GitLab.
+```javascript
+const routes = [
+  {
+    path: '/',
+    component: () => import('@/layouts/default.vue'),
+    children: [
+      { path: '', name: 'home', component: () => import('@/pages/Home.vue') },
+      { path: '/admin', name: 'admin', component: () => import('@/pages/admin/index.vue') },
+      { path: '/tribus', name: 'tribus', component: () => import('@/pages/tribu/index.vue') }
+    ]
+  },
+  { path: '*', component: () => import('@/pages/error.vue') }
+]
+```
 
-- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Las rutas están protegidas con middleware para validar la autenticación.
 
-***
+---
 
-# Editing this README
+## Manejo de Estado con Vuex
+El estado global está definido en `src/store/index.js` y se divide en módulos:
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://gitlab.com/-/experiment/new_project_readme_content:56b7fc8159c8492405958efd0402a98e?https://www.makeareadme.com/) for this template.
+- **auth.js** → Manejo de autenticación y sesión de usuario
+- **lang.js** → Control de idiomas
+- **test.js** → Módulo de prueba
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Ejemplo de una mutación en Vuex:
 
-## Name
-Choose a self-explaining name for your project.
+```javascript
+mutations: {
+  setUser(state, user) {
+    state.user = user;
+  }
+}
+```
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+---
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Consumo de la API
+El sistema se comunica con el backend mediante **Axios**. Los servicios están en `src/services/` y están organizados por funcionalidad:
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Ejemplo de servicio de autenticación (`src/services/auth/auth.js`):
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+```javascript
+import axios from '@/library/axios';
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+export function login(data) {
+  return axios.post('/api/auth/login', data);
+}
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+---
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## Estilos y Temas
+Los estilos están en `src/assets/sass/` y se dividen en:
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- **abstracts/** → Mixins y variables globales
+- **base/** → Tipografía y estilos generales
+- **components/** → Estilos de componentes reutilizables
+- **personalizados/** → Estilos específicos del proyecto
+- **theme/** → Configuración de colores
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Ejemplo de uso de variables SCSS:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+```scss
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+```
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+---
 
-## License
-For open source projects, say how it is licensed.
+## Internacionalización (i18n)
+El soporte de idiomas está en `src/lang/`, con archivos JSON para cada idioma:
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Ejemplo (`src/lang/es.json`):
+
+```json
+{
+  "welcome": "Bienvenido a Hunters Campus",
+  "logout": "Cerrar sesión"
+}
+```
+
+Implementación en un componente:
+
+```vue
+<p>{{ $t('welcome') }}</p>
+```
+
+---
+
+## Seguridad y Middleware
+Se utilizan middlewares en `src/middleware/` para validar autenticación y configuración de idioma.
+
+Ejemplo de middleware de autenticación (`check-auth.js`):
+
+```javascript
+export default function(to, from, next) {
+  const loggedIn = localStorage.getItem('token');
+  if (!loggedIn && to.name !== 'login') {
+    next({ name: 'login' });
+  } else {
+    next();
+  }
+}
+```
+
+---
+
+## Conclusión
+El frontend de **Hunters Campus** es modular y escalable, basado en **Vue.js**, con un manejo eficiente de estado mediante **Vuex**, una API bien estructurada con **Axios**, y un diseño flexible gracias a **SCSS** y **Element UI**. Su arquitectura facilita el mantenimiento y la evolución del proyecto.
 
