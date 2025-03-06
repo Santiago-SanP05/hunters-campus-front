@@ -48,24 +48,24 @@ module.exports = {
     publicPath: '/',
     outputDir: 'dist',
     assetsDir: 'static',
-    pwa: {
-        name: 'Hunters',
-        themeColor: '#4DBA87',
-        msTileColor: '#000000',
-        appleMobileWebAppCapable: 'yes',
-        appleMobileWebAppStatusBarStyle: 'black',
-        workboxOptions: {
-            skipWaiting: true,
-            cleanupOutdatedCaches: true,
-            exclude: [
-                /\.map$/,
-                /manifest\.json$/
-            ]
-        },
-        manifestOptions: {
-            name: 'Hunters',
-            display: 'standalone',
-            start_url: '/'
-        }
-    }
+//    pwa: {
+//        name: 'Hunters',
+//        themeColor: '#4DBA87',
+//        msTileColor: '#000000',
+//        appleMobileWebAppCapable: 'yes',
+//        appleMobileWebAppStatusBarStyle: 'black',
+//        workboxOptions: {
+//            skipWaiting: true,
+//            cleanupOutdatedCaches: true,
+//            exclude: [
+//                /\.map$/,
+//                /manifest\.json$/
+//            ]
+//        },
+//        manifestOptions: {
+//            name: 'Hunters',
+//            display: 'standalone',
+//            start_url: '/'
+//        }
+//    }
 }
