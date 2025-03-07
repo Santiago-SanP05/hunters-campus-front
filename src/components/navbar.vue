@@ -9,7 +9,7 @@
             <img height="30" class="img-hover" :src="`/img/logos/${url_cabi}.svg`" @mouseenter="setColorImage(5)" @mouseleave="setDefaultImage(5)" /> -->
         </div>
         <router-link :to="{ name: 'home', }">
-            <img height="65" :src="`/img/logos/hunters-color.svg`" />
+            <img height="65" src="/img/logos/hunters-color.svg" />
         </router-link>
         <div class="col px-0 pl-xl-3 px-lg-3 pl-md-2 pl-sm-2 pl-1 d-flex justify-content-end">
             <slot name="rightSide">
