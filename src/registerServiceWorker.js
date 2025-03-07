@@ -1,33 +1,32 @@
 /* eslint-disable no-console */
 
-/* eslint-disable no-console */
-import { register } from 'register-service-worker';
+import { register } from 'register-service-worker'
 
 if (process.env.NODE_ENV === 'production') {
-  register('/service-worker.js', {  // 🔄 URL directa sin process.env.BASE_URL
-    ready() {
+  register(`${process.env.BASE_URL}service-worker.js`, {
+    ready () {
       console.log(
-        'La aplicación está siendo servida desde la caché por un Service Worker.'
-      );
+        'App is being served from cache by a service worker.\n' +
+        'For more details, visit https://goo.gl/AFskqB'
+      )
     },
-    registered() {
-      console.log('El Service Worker ha sido registrado.');
+    registered () {
+      console.log('Service worker has been registered.')
     },
-    cached() {
-      console.log('El contenido ha sido cacheado para uso offline.');
+    cached () {
+      console.log('Content has been cached for offline use.')
     },
-    updatefound() {
-      console.log('Se está descargando nuevo contenido.');
+    updatefound () {
+      console.log('New content is downloading.')
     },
-    updated() {
-      console.log('Nuevo contenido disponible. Recargando página...');
-      window.location.reload();  // 🔄 Fuerza la recarga cuando haya nueva versión
+    updated () {
+      console.log('New content is available; please refresh.')
     },
-    offline() {
-      console.log('Sin conexión a internet. La aplicación se ejecuta en modo offline.');
+    offline () {
+      console.log('No internet connection found. App is running in offline mode.')
     },
-    error(error) {
-      console.error('Error durante el registro del Service Worker:', error);
+    error (error) {
+      console.error('Error during service worker registration:', error)
     }
-  });
+  })
 }
